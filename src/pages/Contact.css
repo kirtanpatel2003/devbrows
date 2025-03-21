@@ -1,0 +1,32 @@
+.contact-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 120px;
+  }
+  
+  button {
+    background: #ffcc00;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  

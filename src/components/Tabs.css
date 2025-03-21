@@ -1,0 +1,35 @@
+.tabs-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .tabs button.active {
+    background: #ff0000; /* Active tab color */
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  

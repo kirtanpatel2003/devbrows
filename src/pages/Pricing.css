@@ -1,0 +1,27 @@
+.pricing-container {
+    text-align: center;
+    padding: 50px;
+    color: white;
+  }
+  
+  .pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .plan {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+  }
+  
+  .plan.popular {
+    border: 2px solid #ffcc00;
+  }
+  
+  .plan h2 {
+    color: #ffcc00;
+  }
+  
