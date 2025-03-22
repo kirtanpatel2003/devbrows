@@ -1,17 +1,34 @@
 import React from "react";
-import Hyperspeed from './blocks/Backgrounds/Hyperspeed/Hyperspeed'; // Adjust path if needed
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import OverlayText from "./components/OverlayText";
+import AboutUs from "./pages/AboutUs";
+import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import Hyperspeed from "./blocks/Backgrounds/Hyperspeed/Hyperspeed";
+
+function HomePage() {
+  return (
+    <>
+      <Hyperspeed />
+      <OverlayText />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Hyperspeed />
-      <OverlayText />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

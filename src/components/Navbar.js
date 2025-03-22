@@ -1,11 +1,8 @@
-
-import React, { useState } from "react";
-import "./Navbar.css"; // Ensure you have styles for positioning
-import logo from "../logo.svg"; // Replace with your logo if needed
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState("about");
-
   return (
     <nav className="navbar">
       {/* Logo or Brand Name */}
@@ -13,24 +10,18 @@ const Navbar = () => {
 
       {/* Tabs inside Navbar */}
       <div className="nav-tabs">
-        <button 
-          className={activeTab === "about" ? "active" : ""} 
-          onClick={() => setActiveTab("about")}
-        >
+        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
+          Home
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>
           About Us
-        </button>
-        <button 
-          className={activeTab === "pricing" ? "active" : ""} 
-          onClick={() => setActiveTab("pricing")}
-        >
+        </NavLink>
+        <NavLink to="/pricing" className={({ isActive }) => isActive ? "active" : ""}>
           Pricing
-        </button>
-        <button 
-          className={activeTab === "contact" ? "active" : ""} 
-          onClick={() => setActiveTab("contact")}
-        >
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>
           Contact
-        </button>
+        </NavLink>
       </div>
     </nav>
   );

@@ -1,32 +1,236 @@
-.contact-container {
-    max-width: 600px;
-    margin: 100px auto;
-    padding: 20px;
-    text-align: center;
+/* .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
     color: white;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
   }
   
   form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #333;
   }
   
-  input, textarea {
+  label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
     padding: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid #444;
     border-radius: 5px;
-    border: none;
+    outline: none;
     font-size: 16px;
   }
   
+  input::placeholder,
+  textarea::placeholder {
+    color: gray;
+  }
+  
   textarea {
-    height: 120px;
+    height: 100px;
+    resize: none;
+  }
+  
+  .contact-method-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .contact-method-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .contact-method-options input {
+    margin-right: 10px;
   }
   
   button {
-    background: #ffcc00;
-    padding: 10px;
+    margin-top: 15px;
+    background: #00d8ff;
+    color: black;
     border: none;
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #009fcc;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+  }
+   */
+
+  /* General styling */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+    color: white;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #333;
+    padding-right: 25px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  input,
+  textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    background: black; /* Black background */
+    color: white; /* White text */
+    border: 1px solid #444;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: gray;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Contact Method Capsules */
+  .contact-method-capsules {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .capsule {
+    background: transparent;
+    border: 1px solid #00d8ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .capsule:hover {
+    background: #00d8ff;
+    color: black;
+  }
+  
+  .capsule.selected {
+    background: #00d8ff;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Phone Input */
+  .react-tel-input .form-control {
+    background: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid #444 !important;
+  }
+  
+  .react-tel-input .country-list {
+    background: #000000 !important;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  .react-tel-input .country-list .search{
+    background: #000000 !important;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  .react-tel-input .country-list .country.highlight{
+    background-color: #605e5e !important;
+  }
+  
+  button {
+    margin-top: 15px;
+    background: #00d8ff;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #009fcc;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
   }
   

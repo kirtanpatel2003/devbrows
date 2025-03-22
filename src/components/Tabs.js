@@ -1,13 +1,19 @@
 import React, { useState } from "react";
-import "./Tabs.css"; // Import CSS for styling
+import "./Tabs.css";
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState("home");
 
   return (
     <div className="tabs-container">
       {/* Tab Headers */}
       <div className="tabs">
+        <button 
+          className={activeTab === "home" ? "home" : ""} 
+          onClick={() => setActiveTab("home")}
+        >
+          Home
+        </button>
         <button 
           className={activeTab === "about" ? "active" : ""} 
           onClick={() => setActiveTab("about")}
@@ -30,6 +36,10 @@ const Tabs = () => {
 
       {/* Tab Content */}
       <div className="tab-content">
+        {activeTab === "Home" && (
+          <div>
+          </div>
+        )}
         {activeTab === "about" && (
           <div>
             <h2>About Us</h2>
