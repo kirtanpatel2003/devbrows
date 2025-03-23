@@ -37,9 +37,9 @@ const AboutUs = () => {
           ideas into seamless, high-performance digital solutions. With a deep understanding of modern
           web technologies, we create experiences that are fast, intuitive, and scalable.
         </p>
-        <p>
+        {/* <p>
           🔹 Let’s build, innovate, and grow—together.
-        </p>
+        </p> */}
       </div>
     </div>
   );
